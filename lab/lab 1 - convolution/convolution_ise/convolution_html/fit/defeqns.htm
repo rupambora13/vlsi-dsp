@@ -1,0 +1,79 @@
+<html><head><link type='text/css' href='style.css' rel='stylesheet'></head><body class='pgBgnd'>
+<h3 align='center'>Equations</h3>
+<table width='90%' align='center' border='1' cellpadding='0' cellspacing='0'>
+<tr><td>
+</td></tr><tr><td>
+********** Mapped Logic **********
+</td></tr><tr><td>
+</td></tr><tr><td>
+C(0) <= (x(0) AND y(0));
+</td></tr><tr><td>
+</td></tr><tr><td>
+C(1) <= (x(1) AND y(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C(1) <= (y(1) AND x(0));
+</td></tr><tr><td>
+</td></tr><tr><td>
+C(2) <= (x(2) AND y(0))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C(2) <= ((add0001_and0000/add0001_and0000_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT _mult0002/_mult0002_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT add0001_and0000/add0001_and0000_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	_mult0002/_mult0002_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+C(3) <= (y(0) AND x(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C(3) <= ((add0004_and0000/add0004_and0000_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT _add0003/_add0003_D)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT add0004_and0000/add0004_and0000_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	_add0003/_add0003_D));
+</td></tr><tr><td>
+</td></tr><tr><td>
+C(4) <= (y(1) AND x(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C(4) <= ((_add0006/_add0006_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	NOT add0007_and0000/add0007_and0000_D2)
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	OR (NOT _add0006/_add0006_D2 AND 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	add0007_and0000/add0007_and0000_D2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+C(5) <= (y(2) AND x(3))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C(5) <= (y(3) AND x(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+C(6) <= (y(3) AND x(3));
+</td></tr><tr><td>
+</td></tr><tr><td>
+_add0003/_add0003_D <= (x(1) AND y(2))
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	 XOR 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_add0003/_add0003_D <= (y(3) AND x(0));
+</td></tr><tr><td>
+</td></tr><tr><td>
+_add0006/_add0006_D2 <= (y(3) AND x(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+_mult0002/_mult0002_D2 <= (x(0) AND y(2));
+</td></tr><tr><td>
+</td></tr><tr><td>
+add0001_and0000/add0001_and0000_D2 <= (x(1) AND y(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+add0004_and0000/add0004_and0000_D2 <= (x(2) AND y(1));
+</td></tr><tr><td>
+</td></tr><tr><td>
+add0007_and0000/add0007_and0000_D2 <= (x(2) AND y(2));
+</td></tr><tr><td>
+Register Legend:
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FDCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FTCPE (Q,D,C,CLR,PRE,CE); 
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LDCP  (Q,D,G,CLR,PRE); 
+</td></tr><tr><td>
+</td></tr>
+</table>
+<form><span class="pgRef"><table width="90%" align="center"><tr>
+<td align="left"><input type="button" onclick="javascript:parent.leftnav.showTop()" onmouseover="window.status='goto top of page'; return true;" onmouseout="window.status=''" value="back to top"></td>
+<td align="right"><input type="button" onclick="window.print()" onmouseover="window.status='print page'; return true;" onmouseout="window.status=''" value="print page"></td>
+</tr></table></span></form>
+</body></html>

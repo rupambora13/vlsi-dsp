@@ -1,0 +1,36 @@
+ command line:
+   ./correlation_wf_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  50829
+
+Sun May 21 19:36:55 2023
+
+Total Line Count : 83
+
+ Elaboration time : 0 sec.
+
+ Estimate current memory usage : 157.712 Meg. 
+
+ Total Signals          : 14
+ Total Nets             : 37
+ Total Signal Drivers   : 10
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 13
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 188
+ntrace select -o on -n /correlation_wf/R 
+ntrace select -o on -n /correlation_wf/x 
+ntrace select -o on -n /correlation_wf/y 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Simulation time 0 sec.
+
+ Estimate current memory usage : 163.353 Meg. 
+
+Sun May 21 19:54:40 2023
+

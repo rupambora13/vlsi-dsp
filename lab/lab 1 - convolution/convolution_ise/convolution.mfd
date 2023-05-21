@@ -1,0 +1,132 @@
+MDF Database:  version 1.0
+MDF_INFO | convolution | XA9536XL-15-VQ44
+MACROCELL | 0 | 11 | C_0_OBUF
+ATTRIBUTES | 264963 | 0
+INPUTS | 2 | x<0>  | y<0>
+INPUTP | 2 | 37 | 41
+EQ | 1 | 
+   C<0> = x<0> & y<0>;
+
+MACROCELL | 0 | 1 | C_1_OBUF
+ATTRIBUTES | 264963 | 0
+INPUTS | 4 | x<1>  | y<0>  | y<1>  | x<0>
+INPUTP | 4 | 1 | 41 | 47 | 37
+EQ | 2 | 
+   C<1> = x<1> & y<0>
+	$ y<1> & x<0>;
+
+MACROCELL | 1 | 1 | C_2_OBUF
+ATTRIBUTES | 264963 | 0
+INPUTS | 4 | x<2>  | y<0>  | add0001_and0000/add0001_and0000_D2  | _mult0002/_mult0002_D2
+INPUTMC | 2 | 0 | 13 | 0 | 14
+INPUTP | 2 | 45 | 41
+EQ | 5 | 
+   C<2> = x<2> & y<0>
+	$ add0001_and0000/add0001_and0000_D2 & 
+	!_mult0002/_mult0002_D2
+	# !add0001_and0000/add0001_and0000_D2 & 
+	_mult0002/_mult0002_D2;
+
+MACROCELL | 1 | 8 | C_3_OBUF
+ATTRIBUTES | 264963 | 0
+INPUTS | 4 | y<0>  | x<3>  | add0004_and0000/add0004_and0000_D2  | _add0003/_add0003_D
+INPUTMC | 2 | 0 | 12 | 0 | 17
+INPUTP | 2 | 41 | 42
+EQ | 5 | 
+   C<3> = y<0> & x<3>
+	$ add0004_and0000/add0004_and0000_D2 & 
+	!_add0003/_add0003_D
+	# !add0004_and0000/add0004_and0000_D2 & 
+	_add0003/_add0003_D;
+
+MACROCELL | 1 | 13 | C_4_OBUF
+ATTRIBUTES | 264963 | 0
+INPUTS | 4 | y<1>  | x<3>  | _add0006/_add0006_D2  | add0007_and0000/add0007_and0000_D2
+INPUTMC | 2 | 0 | 16 | 0 | 10
+INPUTP | 2 | 47 | 42
+EQ | 5 | 
+   C<4> = y<1> & x<3>
+	$ _add0006/_add0006_D2 & 
+	!add0007_and0000/add0007_and0000_D2
+	# !_add0006/_add0006_D2 & 
+	add0007_and0000/add0007_and0000_D2;
+
+MACROCELL | 0 | 7 | C_5_OBUF
+ATTRIBUTES | 264963 | 0
+INPUTS | 4 | y<2>  | x<3>  | y<3>  | x<2>
+INPUTP | 4 | 34 | 42 | 6 | 45
+EQ | 2 | 
+   C<5> = y<2> & x<3>
+	$ y<3> & x<2>;
+
+MACROCELL | 0 | 15 | C_6_OBUF
+ATTRIBUTES | 264963 | 0
+INPUTS | 2 | y<3>  | x<3>
+INPUTP | 2 | 6 | 42
+EQ | 1 | 
+   C<6> = y<3> & x<3>;
+
+MACROCELL | 0 | 13 | add0001_and0000/add0001_and0000_D2
+ATTRIBUTES | 133889 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 2 | x<1>  | y<1>
+INPUTP | 2 | 1 | 47
+EQ | 1 | 
+   add0001_and0000/add0001_and0000_D2 = x<1> & y<1>;
+
+MACROCELL | 0 | 14 | _mult0002/_mult0002_D2
+ATTRIBUTES | 133889 | 0
+OUTPUTMC | 1 | 1 | 1
+INPUTS | 2 | x<0>  | y<2>
+INPUTP | 2 | 37 | 34
+EQ | 1 | 
+   _mult0002/_mult0002_D2 = x<0> & y<2>;
+
+MACROCELL | 0 | 12 | add0004_and0000/add0004_and0000_D2
+ATTRIBUTES | 133889 | 0
+OUTPUTMC | 1 | 1 | 8
+INPUTS | 2 | x<2>  | y<1>
+INPUTP | 2 | 45 | 47
+EQ | 1 | 
+   add0004_and0000/add0004_and0000_D2 = x<2> & y<1>;
+
+MACROCELL | 0 | 17 | _add0003/_add0003_D
+ATTRIBUTES | 133889 | 0
+OUTPUTMC | 1 | 1 | 8
+INPUTS | 4 | x<1>  | y<2>  | y<3>  | x<0>
+INPUTP | 4 | 1 | 34 | 6 | 37
+EQ | 2 | 
+   _add0003/_add0003_D = x<1> & y<2>
+	$ y<3> & x<0>;
+
+MACROCELL | 0 | 16 | _add0006/_add0006_D2
+ATTRIBUTES | 133889 | 0
+OUTPUTMC | 1 | 1 | 13
+INPUTS | 2 | y<3>  | x<1>
+INPUTP | 2 | 6 | 1
+EQ | 1 | 
+   _add0006/_add0006_D2 = y<3> & x<1>;
+
+MACROCELL | 0 | 10 | add0007_and0000/add0007_and0000_D2
+ATTRIBUTES | 133889 | 0
+OUTPUTMC | 1 | 1 | 13
+INPUTS | 2 | x<2>  | y<2>
+INPUTP | 2 | 45 | 34
+EQ | 1 | 
+   add0007_and0000/add0007_and0000_D2 = x<2> & y<2>;
+
+PIN | y<3> | 64 | 0 | N/A | 6 | 4 | 0 | 7 | 0 | 15 | 0 | 17 | 0 | 16
+PIN | x<1> | 64 | 0 | N/A | 1 | 4 | 0 | 1 | 0 | 13 | 0 | 17 | 0 | 16
+PIN | x<2> | 64 | 0 | N/A | 45 | 4 | 1 | 1 | 0 | 7 | 0 | 12 | 0 | 10
+PIN | y<1> | 64 | 0 | N/A | 47 | 4 | 0 | 1 | 1 | 13 | 0 | 13 | 0 | 12
+PIN | x<0> | 64 | 0 | N/A | 37 | 4 | 0 | 11 | 0 | 1 | 0 | 14 | 0 | 17
+PIN | y<2> | 64 | 0 | N/A | 34 | 4 | 0 | 7 | 0 | 14 | 0 | 17 | 0 | 10
+PIN | y<0> | 64 | 0 | N/A | 41 | 4 | 0 | 11 | 0 | 1 | 1 | 1 | 1 | 8
+PIN | x<3> | 64 | 0 | N/A | 42 | 4 | 1 | 8 | 1 | 13 | 0 | 7 | 0 | 15
+PIN | C<0> | 536871040 | 0 | N/A | 19
+PIN | C<1> | 536871040 | 0 | N/A | 8
+PIN | C<2> | 536871040 | 0 | N/A | 5
+PIN | C<3> | 536871040 | 0 | N/A | 44
+PIN | C<4> | 536871040 | 0 | N/A | 35
+PIN | C<5> | 536871040 | 0 | N/A | 14
+PIN | C<6> | 536871040 | 0 | N/A | 27

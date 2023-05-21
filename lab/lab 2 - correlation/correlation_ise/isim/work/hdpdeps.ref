@@ -1,0 +1,10 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v
+FL "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation.v" 2023/05/21.19:31:58 J.36
+MO work/correlation \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation_wf.tfw" 2023/05/21.19:12:28 J.36
+MO work/correlation_wf \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation_wf.tfw" \
+      MI correlation

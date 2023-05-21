@@ -1,0 +1,10 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v
+FL "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution.v" 2023/05/21.19:26:52 J.36
+MO work/convolution \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_wf.tfw" 2023/05/21.19:22:06 J.36
+MO work/convolution_wf \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_wf.tfw" \
+      MI convolution

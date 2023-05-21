@@ -1,0 +1,3 @@
+MO convolution_wf NULL "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_wf.tfw" vlg48/convolution__wf.bin 1684677475
+MO glbl NULL C:/Xilinx92i/verilog/src/glbl.v vlg2D/glbl.bin 1684677475
+MO convolution NULL "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution.v" vlg68/convolution.bin 1684677474

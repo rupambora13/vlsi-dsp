@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
-module convolution();
+module correlation(x,y,R);
 	input[3:0]x;
 	input[3:0]y;
-	output reg[6:0]C;
+	output reg[6:0]R;
 	
 	integer n,k;
 	
@@ -16,11 +16,10 @@ module convolution();
 	
 	always@(a or b)
 	begin
-		C=0;
+		R=0;
 		for (n=0;n<=6;n=n+1)
 			for (k=0;k<=n;k=k+1)begin
-				C[n]=C[n]+(a[k]*b[n-k]);
+				R[n]=R[n]+(a[k]*b[n+k]);
 			end
 		end
-	end
 endmodule

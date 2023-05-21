@@ -1,0 +1,3 @@
+MODULE correlation_wf
+SUBMODULE correlation
+INSTANCE UUT

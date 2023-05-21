@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-module convolution();
+module convolution(x,y,C);
 	input[3:0]x;
 	input[3:0]y;
 	output reg[6:0]C;
@@ -22,5 +22,4 @@ module convolution();
 				C[n]=C[n]+(a[k]*b[n-k]);
 			end
 		end
-	end
 endmodule

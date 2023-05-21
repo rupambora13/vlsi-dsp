@@ -1,0 +1,110 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : convolution_wf.ant
+// /___/   /\     Timestamp : Sun May 21 19:22:06 2023
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: convolution_wf
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module convolution_wf;
+    reg [3:0] x = 4'b0000;
+    reg [3:0] y = 4'b0000;
+    wire [6:0] C;
+
+
+    convolution UUT (
+        .x(x),
+        .y(y),
+        .C(C));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_C;
+        forever begin
+            #50;
+            ANNOTATE_C;
+            #50;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("D:\\git repositories\\vlsi-dsp\\lab\\lab 1 - convolution\\convolution_ise\\convolution_wf.ano");
+        #1000 // Final time:  1000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        x = 4'b1010;
+        y = 4'b1010;
+        // -------------------------------------
+        // -------------  Current Time:  200ns
+        #100;
+        x = 4'b0000;
+        y = 4'b0011;
+        // -------------------------------------
+        // -------------  Current Time:  300ns
+        #100;
+        x = 4'b0101;
+        y = 4'b1000;
+        // -------------------------------------
+        // -------------  Current Time:  400ns
+        #100;
+        x = 4'b1011;
+        y = 4'b1100;
+        // -------------------------------------
+        // -------------  Current Time:  500ns
+        #100;
+        x = 4'b1110;
+        y = 4'b0111;
+        // -------------------------------------
+        // -------------  Current Time:  600ns
+        #100;
+        x = 4'b0100;
+        y = 4'b1111;
+        // -------------------------------------
+        // -------------  Current Time:  700ns
+        #100;
+        x = 4'b0001;
+        y = 4'b1001;
+        // -------------------------------------
+        // -------------  Current Time:  800ns
+        #100;
+        x = 4'b0010;
+        y = 4'b0010;
+        // -------------------------------------
+        // -------------  Current Time:  900ns
+        #100;
+        x = 4'b1100;
+        y = 4'b1011;
+    end
+
+    task ANNOTATE_C;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,C,%b]", $time, C);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

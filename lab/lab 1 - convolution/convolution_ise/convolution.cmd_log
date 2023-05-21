@@ -1,0 +1,7 @@
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_ise.ise" -intstyle ise -ifn convolution.xst -ofn convolution.syr
+ngdbuild -ise "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_ise.ise" -intstyle ise -dd _ngo -i -p xa9500xl "convolution.ngc" convolution.ngd
+cpldfit -ise "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_ise.ise" -intstyle ise -p xa95*xl-*-* -ofmt vhdl -htmlrpt -loc on -slew fast -init low -inputs 54 -pterms 25 -terminate keeper convolution.ngd
+XSLTProcess -ise "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_ise.ise" convolution_build.xml
+tsim -ise "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_ise.ise" -intstyle ise convolution convolution.nga
+taengine -ise "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_ise.ise" -intstyle ise -f convolution -w --format html1 -l D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_html/tim/timing_report.htm
+hprep6 -ise "D:/git repositories/vlsi-dsp/lab/lab 1 - convolution/convolution_ise/convolution_ise.ise" -s IEEE1149 -i convolution
