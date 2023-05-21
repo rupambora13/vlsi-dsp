@@ -1,0 +1,3 @@
+MODULE nand_sl_wf
+SUBMODULE nand_sl
+INSTANCE UUT

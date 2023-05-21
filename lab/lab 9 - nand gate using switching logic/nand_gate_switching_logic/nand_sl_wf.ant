@@ -1,0 +1,100 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : nand_sl_wf.ant
+// /___/   /\     Timestamp : Sun May 21 20:30:42 2023
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: nand_sl_wf
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module nand_sl_wf;
+    reg va = 1'b0;
+    reg vb = 1'b0;
+    wire vout;
+
+
+    nand_sl UUT (
+        .va(va),
+        .vb(vb),
+        .vout(vout));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_vout;
+        forever begin
+            #50;
+            ANNOTATE_vout;
+            #50;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("D:\\git repositories\\vlsi-dsp\\lab\\lab 9 - nand gate using switching logic\\nand_gate_switching_logic\\nand_sl_wf.ano");
+        #1000 // Final time:  1000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  200ns
+        #200;
+        vb = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  300ns
+        #100;
+        va = 1'b1;
+        vb = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  400ns
+        #100;
+        vb = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  500ns
+        #100;
+        va = 1'b0;
+        vb = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  600ns
+        #100;
+        va = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  700ns
+        #100;
+        va = 1'b0;
+        vb = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  800ns
+        #100;
+        va = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  900ns
+        #100;
+        va = 1'b0;
+    end
+
+    task ANNOTATE_vout;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,vout,%b]", $time, vout);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

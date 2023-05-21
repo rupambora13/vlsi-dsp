@@ -1,0 +1,1 @@
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 9 - nand gate using switching logic/nand_gate_switching_logic/nand_gate_switching_logic.ise" -intstyle ise -ifn nand_sl.xst -ofn nand_sl.syr
