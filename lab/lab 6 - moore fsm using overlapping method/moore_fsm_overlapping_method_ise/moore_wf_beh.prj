@@ -1,0 +1,3 @@
+verilog work "moore_overlap.v"
+verilog work "moore_wf.tfw"
+verilog work "C:/Xilinx92i/verilog/src/glbl.v"

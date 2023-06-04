@@ -1,0 +1,3 @@
+verilog work "fir_filter.v"
+verilog work "fir_wf.tfw"
+verilog work "C:/Xilinx92i/verilog/src/glbl.v"

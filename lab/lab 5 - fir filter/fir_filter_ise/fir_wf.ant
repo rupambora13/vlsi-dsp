@@ -1,0 +1,131 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : fir_wf.ant
+// /___/   /\     Timestamp : Sun May 28 22:15:53 2023
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: fir_wf
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module fir_wf;
+    reg [7:0] x = 8'b00000000;
+    wire [7:0] y;
+    reg [2:0] b = 3'b000;
+    reg clk = 1'b0;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    fir_filter UUT (
+        .x(x),
+        .y(y),
+        .b(b),
+        .clk(clk));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock clk
+        #0;
+        ANNOTATE_y;
+        #OFFSET;
+        forever begin
+            #115;
+            ANNOTATE_y;
+            #85;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("D:\\git repositories\\vlsi-dsp\\lab\\lab 5 - fir filter\\fir_filter_ise\\fir_wf.ano");
+        #2200 // Final time:  2200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  185ns
+        #185;
+        x = 8'b01000001;
+        // -------------------------------------
+        // -------------  Current Time:  385ns
+        #200;
+        x = 8'b11100011;
+        b = 3'b001;
+        // -------------------------------------
+        // -------------  Current Time:  585ns
+        #200;
+        x = 8'b11101011;
+        b = 3'b010;
+        // -------------------------------------
+        // -------------  Current Time:  785ns
+        #200;
+        x = 8'b01101001;
+        b = 3'b011;
+        // -------------------------------------
+        // -------------  Current Time:  985ns
+        #200;
+        x = 8'b01000000;
+        b = 3'b100;
+        // -------------------------------------
+        // -------------  Current Time:  1185ns
+        #200;
+        x = 8'b01000100;
+        b = 3'b101;
+        // -------------------------------------
+        // -------------  Current Time:  1385ns
+        #200;
+        x = 8'b10010111;
+        b = 3'b110;
+        // -------------------------------------
+        // -------------  Current Time:  1585ns
+        #200;
+        x = 8'b00110010;
+        b = 3'b111;
+        // -------------------------------------
+        // -------------  Current Time:  1785ns
+        #200;
+        x = 8'b01101010;
+        b = 3'b100;
+        // -------------------------------------
+        // -------------  Current Time:  1985ns
+        #200;
+        x = 8'b00111010;
+        b = 3'b101;
+    end
+
+    task ANNOTATE_y;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,y,%b]", $time, y);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

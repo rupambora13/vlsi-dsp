@@ -1,10 +1,10 @@
 Release 9.2i - xst J.36
 Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to ./xst/projnav.tmp
-CPU : 0.00 / 0.03 s | Elapsed : 0.00 / 1.00 s
+CPU : 0.00 / 0.03 s | Elapsed : 0.00 / 0.00 s
  
 --> Parameter xsthdpdir set to ./xst
-CPU : 0.00 / 0.03 s | Elapsed : 0.00 / 1.00 s
+CPU : 0.00 / 0.03 s | Elapsed : 0.00 / 0.00 s
  
 --> Reading design: correlation.prj
 
@@ -70,17 +70,120 @@ wysiwyg                            : NO
 *                          HDL Compilation                              *
 =========================================================================
 Compiling verilog file "correlation.v" in library work
-ERROR:HDLCompilers:26 - "correlation.v" line 3 expecting ';', found 'input'
-ERROR:HDLCompilers:208 - "correlation.v" line 2 Port reference 'R' was not declared as input, inout or output
-ERROR:HDLCompilers:208 - "correlation.v" line 2 Port reference 'x' was not declared as input, inout or output
-ERROR:HDLCompilers:208 - "correlation.v" line 2 Port reference 'y' was not declared as input, inout or output
 Module <correlation> compiled
-Analysis of file <"correlation.prj"> failed.
+No errors in compilation
+Analysis of file <"correlation.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <correlation> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <correlation>.
+Module <correlation> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <correlation>.
+    Related source file is "correlation.v".
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 1-bit adder for signal <$add0000> created at line 20.
+    Found 1-bit adder for signal <$add0001> created at line 20.
+    Found 1-bit adder for signal <$add0002> created at line 20.
+    Found 1-bit adder for signal <$add0003> created at line 20.
+    Found 1-bit adder for signal <$add0004> created at line 20.
+    Found 1-bit adder for signal <$add0005> created at line 20.
+    Found 1-bit adder for signal <$add0007> created at line 20.
+    Found 1-bit adder for signal <$add0008> created at line 20.
+    Found 1-bit adder for signal <$add0012> created at line 20.
+    Summary:
+	inferred   9 Adder/Subtractor(s).
+Unit <correlation> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 1-bit adder                                           : 9
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 9
+ 1-bit adder                                           : 9
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <correlation> ...
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : correlation.ngr
+Top Level Output File Name         : correlation
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : YES
+Target Technology                  : Automotive 9500XL
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 15
+
+Cell Usage :
+# BELS                             : 25
+#      AND2                        : 16
+#      XOR2                        : 9
+# IO Buffers                       : 15
+#      IBUF                        : 8
+#      OBUF                        : 7
+=========================================================================
+CPU : 0.58 / 0.62 s | Elapsed : 0.00 / 0.00 s
+ 
 --> 
 
-Total memory usage is 176496 kilobytes
+Total memory usage is 180968 kilobytes
 
-Number of errors   :    4 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

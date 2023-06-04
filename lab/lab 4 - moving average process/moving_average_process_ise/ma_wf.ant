@@ -1,0 +1,100 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : ma_wf.ant
+// /___/   /\     Timestamp : Mon Jun 05 00:05:26 2023
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: ma_wf
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module ma_wf;
+    reg [7:0] x = 8'b00000000;
+    reg clk = 1'b0;
+    wire [7:0] y;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    moving_average_filter UUT (
+        .x(x),
+        .clk(clk),
+        .y(y));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock clk
+        #0;
+        ANNOTATE_y;
+        #OFFSET;
+        forever begin
+            #115;
+            ANNOTATE_y;
+            #85;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("D:\\git repositories\\vlsi-dsp\\lab\\lab 4 - moving average process\\moving_average_process_ise\\ma_wf.ano");
+        #1200 // Final time:  1200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  185ns
+        #185;
+        x = 8'b00001001;
+        // -------------------------------------
+        // -------------  Current Time:  385ns
+        #200;
+        x = 8'b10010011;
+        // -------------------------------------
+        // -------------  Current Time:  585ns
+        #200;
+        x = 8'b10110110;
+        // -------------------------------------
+        // -------------  Current Time:  785ns
+        #200;
+        x = 8'b00001010;
+        // -------------------------------------
+        // -------------  Current Time:  985ns
+        #200;
+        x = 8'b10111010;
+    end
+
+    task ANNOTATE_y;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,y,%b]", $time, y);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

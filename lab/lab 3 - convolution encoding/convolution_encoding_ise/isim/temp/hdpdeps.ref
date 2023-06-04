@@ -1,0 +1,10 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO isim_temp/glbl FL $XILINX/verilog/src/glbl.v
+FL "D:/git repositories/vlsi-dsp/lab/lab 3 - convolution encoding/convolution_encoding_ise/convolutional_encoder.v" 2023/05/28.20:52:33 J.36
+MO isim_temp/convolutional_encoder \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 3 - convolution encoding/convolution_encoding_ise/convolutional_encoder.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 3 - convolution encoding/convolution_encoding_ise/encode_tb.v" 2023/05/28.21:00:23 J.36
+MO isim_temp/encode_tb \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 3 - convolution encoding/convolution_encoding_ise/encode_tb.v" \
+      MI convolutional_encoder

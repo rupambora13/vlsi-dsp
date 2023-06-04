@@ -1,0 +1,40 @@
+ command line:
+   ./ma_wf_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  59567
+
+Mon Jun 05 00:05:34 2023
+
+Total Line Count : 63
+
+ Elaboration time : 0 sec.
+
+ Estimate current memory usage : 158.007 Meg. 
+
+ Total Signals          : 12
+ Total Nets             : 25
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 10
+ Total Traceable Variables  : 23
+ Total Scalar Nets and Variables : 202
+ntrace select -o on -n /ma_wf/y 
+ntrace select -o on -n /ma_wf/PERIOD 
+ntrace select -o on -n /ma_wf/DUTY_CYCLE 
+ntrace select -o on -n /ma_wf/OFFSET 
+ntrace select -o on -n /ma_wf/clk 
+ntrace select -o on -n /ma_wf/b 
+ntrace select -o on -n /ma_wf/x 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Simulation time 0 sec.
+
+ Estimate current memory usage : 163.647 Meg. 
+
+Mon Jun 05 00:07:34 2023
+

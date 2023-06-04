@@ -1,0 +1,3 @@
+MODULE mux_wf
+SUBMODULE mux8x1_sl
+INSTANCE UUT

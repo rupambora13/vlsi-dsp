@@ -1,0 +1,99 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : encoder_wf.ant
+// /___/   /\     Timestamp : Sun May 28 21:01:16 2023
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: encoder_wf
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module encoder_wf;
+    reg [2:0] x = 3'b000;
+    wire [7:0] y;
+
+
+    convolutional_encoder UUT (
+        .x(x),
+        .y(y));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process
+        #0;
+        ANNOTATE_y;
+        forever begin
+            #50;
+            ANNOTATE_y;
+            #50;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("D:\\git repositories\\vlsi-dsp\\lab\\lab 3 - convolution encoding\\convolution_encoding_ise\\encoder_wf.ano");
+        #1000 // Final time:  1000 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  100ns
+        #100;
+        x = 3'b101;
+        // -------------------------------------
+        // -------------  Current Time:  200ns
+        #100;
+        x = 3'b010;
+        // -------------------------------------
+        // -------------  Current Time:  300ns
+        #100;
+        x = 3'b101;
+        // -------------------------------------
+        // -------------  Current Time:  400ns
+        #100;
+        x = 3'b010;
+        // -------------------------------------
+        // -------------  Current Time:  500ns
+        #100;
+        x = 3'b101;
+        // -------------------------------------
+        // -------------  Current Time:  600ns
+        #100;
+        x = 3'b010;
+        // -------------------------------------
+        // -------------  Current Time:  700ns
+        #100;
+        x = 3'b101;
+        // -------------------------------------
+        // -------------  Current Time:  800ns
+        #100;
+        x = 3'b010;
+        // -------------------------------------
+        // -------------  Current Time:  900ns
+        #100;
+        x = 3'b101;
+    end
+
+    task ANNOTATE_y;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,y,%b]", $time, y);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

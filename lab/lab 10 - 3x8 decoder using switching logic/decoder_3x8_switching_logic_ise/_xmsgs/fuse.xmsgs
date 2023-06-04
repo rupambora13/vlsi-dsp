@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="Simulator" num="170" delta="unknown" ><arg fmt="%s" index="1">work/decoder3x8_sl</arg> is not compiled properly. Please recompile <arg fmt="%s" index="2">work/decoder3x8_sl</arg> in file &quot;<arg fmt="%s" index="3">D:/git repositories/vlsi-dsp/lab/lab 10 - 3x8 decoder using switching logic/decoder_3x8_switching_logic_ise/decoder_3x8.v</arg>&quot; without -incremental option.
+</msg>
+
+<msg type="error" file="Simulator" num="198" delta="unknown" >Failed when handling dependencies for module <arg fmt="%s" index="1">decoder3x8_wf</arg>
+</msg>
+
+</messages>
+

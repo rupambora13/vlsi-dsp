@@ -1,0 +1,1 @@
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 5 - fir filter/fir_filter_ise/fir_filter_ise.ise" -intstyle ise -ifn fir_filter.xst -ofn fir_filter.syr

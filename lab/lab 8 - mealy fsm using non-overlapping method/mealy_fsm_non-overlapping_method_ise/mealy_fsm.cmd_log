@@ -1,0 +1,2 @@
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 8 - mealy fsm using non-overlapping method/mealy_fsm_non-overlapping_method_ise/mealy_fsm_non-overlapping_method_ise.ise" -intstyle ise -ifn mealy_fsm.xst -ofn mealy_fsm.syr
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 8 - mealy fsm using non-overlapping method/mealy_fsm_non-overlapping_method_ise/mealy_fsm_non-overlapping_method_ise.ise" -intstyle ise -ifn mealy_fsm.xst -ofn mealy_fsm.syr

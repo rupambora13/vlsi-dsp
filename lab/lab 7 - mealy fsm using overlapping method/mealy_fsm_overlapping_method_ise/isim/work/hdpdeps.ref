@@ -1,0 +1,10 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v
+FL "D:/git repositories/vlsi-dsp/lab/lab 7 - mealy fsm using overlapping method/mealy_fsm_overlapping_method_ise/mealy_fsm.v" 2023/06/05.00:16:22 J.36
+MO work/mealy_fsm \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 7 - mealy fsm using overlapping method/mealy_fsm_overlapping_method_ise/mealy_fsm.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 7 - mealy fsm using overlapping method/mealy_fsm_overlapping_method_ise/mealy_wf.tfw" 2023/06/05.00:17:19 J.36
+MO work/mealy_wf \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 7 - mealy fsm using overlapping method/mealy_fsm_overlapping_method_ise/mealy_wf.tfw" \
+      MI mealy_fsm

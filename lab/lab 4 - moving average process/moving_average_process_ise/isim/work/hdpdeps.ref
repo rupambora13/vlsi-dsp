@@ -1,0 +1,10 @@
+V3 8
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v
+FL "D:/git repositories/vlsi-dsp/lab/lab 4 - moving average process/moving_average_process_ise/ma_process.v" 2023/06/05.00:04:04 J.36
+MO work/moving_average_filter \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 4 - moving average process/moving_average_process_ise/ma_process.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 4 - moving average process/moving_average_process_ise/ma_wf.tfw" 2023/06/05.00:05:26 J.36
+MO work/ma_wf \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 4 - moving average process/moving_average_process_ise/ma_wf.tfw" \
+      MI moving_average_filter

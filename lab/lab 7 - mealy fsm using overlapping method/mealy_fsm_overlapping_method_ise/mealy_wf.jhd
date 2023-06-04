@@ -1,0 +1,3 @@
+MODULE mealy_wf
+SUBMODULE mealy_fsm
+INSTANCE UUT

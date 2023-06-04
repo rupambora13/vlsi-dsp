@@ -1,0 +1,15 @@
+V3 8
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v
+FL "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux8x1_sl.v" 2023/05/21.22:27:44 J.36
+MO work/mux8x1_sl \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux8x1_sl.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux_wf.vhw" 2023/06/04.23:32:00 J.36
+EN work/mux_wf 1685901721 \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux_wf.vhw" \
+      PB ieee/STD_LOGIC_TEXTIO 1179176993 PB ieee/std_logic_1164 1179176983 \
+      PB ieee/std_logic_arith 1179176985 PB ieee/STD_LOGIC_UNSIGNED 1179176991 \
+      PB std/textio 1179176969
+AR work/mux_wf/testbench_arch 1685901722 \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux_wf.vhw" \
+      EN work/mux_wf 1685901721 CP mux8x1_sl

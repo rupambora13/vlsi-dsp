@@ -1,0 +1,2 @@
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 3 - convolution encoding/convolution_encoding_ise/convolution_encoding_ise.ise" -intstyle ise -ifn convolutional_encoder.xst -ofn convolutional_encoder.syr
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 3 - convolution encoding/convolution_encoding_ise/convolution_encoding_ise.ise" -intstyle ise -ifn convolutional_encoder.xst -ofn convolutional_encoder.syr

@@ -1,0 +1,2 @@
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 10 - 3x8 decoder using switching logic/decoder_3x8_switching_logic_ise/decoder_3x8_switching_logic_ise.ise" -intstyle ise -ifn decoder3x8_sl.xst -ofn decoder3x8_sl.syr
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 10 - 3x8 decoder using switching logic/decoder_3x8_switching_logic_ise/decoder_3x8_switching_logic_ise.ise" -intstyle ise -ifn decoder3x8_sl.xst -ofn decoder3x8_sl.syr

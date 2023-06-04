@@ -5,5 +5,29 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="Xst" num="850" delta="unknown" >&quot;<arg fmt="%s" index="1">decoder_3x8.v</arg>&quot; line <arg fmt="%d" index="2">12</arg>: Unsupported <arg fmt="%s" index="3">Switch or User Defined Primitive</arg>. 
+</msg>
+
+<msg type="error" file="Xst" num="850" delta="unknown" >&quot;<arg fmt="%s" index="1">decoder_3x8.v</arg>&quot; line <arg fmt="%d" index="2">13</arg>: Unsupported <arg fmt="%s" index="3">Switch or User Defined Primitive</arg>. 
+</msg>
+
+<msg type="error" file="Xst" num="850" delta="unknown" >&quot;<arg fmt="%s" index="1">decoder_3x8.v</arg>&quot; line <arg fmt="%d" index="2">14</arg>: Unsupported <arg fmt="%s" index="3">Switch or User Defined Primitive</arg>. 
+</msg>
+
+<msg type="error" file="Xst" num="850" delta="unknown" >&quot;<arg fmt="%s" index="1">decoder_3x8.v</arg>&quot; line <arg fmt="%d" index="2">15</arg>: Unsupported <arg fmt="%s" index="3">Switch or User Defined Primitive</arg>. 
+</msg>
+
+<msg type="error" file="Xst" num="850" delta="unknown" >&quot;<arg fmt="%s" index="1">decoder_3x8.v</arg>&quot; line <arg fmt="%d" index="2">16</arg>: Unsupported <arg fmt="%s" index="3">Switch or User Defined Primitive</arg>. 
+</msg>
+
+<msg type="error" file="Xst" num="850" delta="unknown" >&quot;<arg fmt="%s" index="1">decoder_3x8.v</arg>&quot; line <arg fmt="%d" index="2">17</arg>: Unsupported <arg fmt="%s" index="3">Switch or User Defined Primitive</arg>. 
+</msg>
+
+<msg type="error" file="Xst" num="850" delta="unknown" >&quot;<arg fmt="%s" index="1">decoder_3x8.v</arg>&quot; line <arg fmt="%d" index="2">18</arg>: Unsupported <arg fmt="%s" index="3">Switch or User Defined Primitive</arg>. 
+</msg>
+
+<msg type="error" file="Xst" num="850" delta="unknown" >&quot;<arg fmt="%s" index="1">decoder_3x8.v</arg>&quot; line <arg fmt="%d" index="2">19</arg>: Unsupported <arg fmt="%s" index="3">Switch or User Defined Primitive</arg>. 
+</msg>
+
 </messages>
 

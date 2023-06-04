@@ -1,0 +1,2 @@
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 4 - moving average process/moving_average_process_ise/moving_average_process_ise.ise" -intstyle ise -ifn ma_process.xst -ofn ma_process.syr
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 4 - moving average process/moving_average_process_ise/moving_average_process_ise.ise" -intstyle ise -ifn ma_process.xst -ofn ma_process.syr

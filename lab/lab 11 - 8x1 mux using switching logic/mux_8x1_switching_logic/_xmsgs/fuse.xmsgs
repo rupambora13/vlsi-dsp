@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="error" file="Simulator" num="170" delta="unknown" ><arg fmt="%s" index="1">work/mux8x1_sl</arg> is not compiled properly. Please recompile <arg fmt="%s" index="2">work/mux8x1_sl</arg> in file &quot;<arg fmt="%s" index="3">D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux8x1_sl.v</arg>&quot; without -incremental option.
+</msg>
+
+<msg type="error" file="Simulator" num="199" delta="unknown" >Failed when handling dependencies for entity <arg fmt="%s" index="1">mux_wf</arg>, architecture <arg fmt="%s" index="2">testbench_arch</arg>
+</msg>
+
+</messages>
+

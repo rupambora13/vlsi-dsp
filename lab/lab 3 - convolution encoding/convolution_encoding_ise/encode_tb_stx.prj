@@ -1,0 +1,3 @@
+verilog isim_temp "convolutional_encoder.v"
+verilog isim_temp "encode_tb.v"
+verilog isim_temp "C:/Xilinx92i/verilog/src/glbl.v"

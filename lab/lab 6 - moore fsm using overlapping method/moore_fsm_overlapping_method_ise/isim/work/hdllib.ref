@@ -1,0 +1,3 @@
+MO moore_wf NULL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_wf.tfw" vlg2E/moore__wf.bin 1685904196
+MO moore_fsm NULL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_overlap.v" vlg6B/moore__fsm.bin 1685904196
+MO glbl NULL C:/Xilinx92i/verilog/src/glbl.v vlg2D/glbl.bin 1685904196

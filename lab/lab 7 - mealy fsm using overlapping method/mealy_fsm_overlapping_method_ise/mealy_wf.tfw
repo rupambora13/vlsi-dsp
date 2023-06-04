@@ -1,0 +1,68 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : mealy_wf.tfw
+// /___/   /\     Timestamp : Mon Jun 05 00:17:19 2023
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: mealy_wf
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module mealy_wf;
+    reg clk = 1'b0;
+    reg reset = 1'b0;
+    reg start = 1'b0;
+    wire out;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    mealy_fsm UUT (
+        .clk(clk),
+        .reset(reset),
+        .start(start),
+        .out(out));
+
+    initial begin
+        // -------------  Current Time:  185ns
+        #185;
+        start = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  385ns
+        #200;
+        reset = 1'b1;
+        start = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  785ns
+        #400;
+        start = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  985ns
+        #200;
+        start = 1'b0;
+    end
+
+endmodule
+

@@ -1,37 +1,36 @@
  command line:
-   ./nand_sl_isim_beh.exe
+   ./nand_wf_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  51809
+     -ipcport  59184
 
-Sun May 21 21:15:16 2023
+Sun Jun 04 23:29:37 2023
 
-Total Line Count : 45
+Total Line Count : 68
 
  Elaboration time : 0 sec.
 
- Estimate current memory usage : 157.524 Meg. 
+ Estimate current memory usage : 157.868 Meg. 
 
- Total Signals          : 14
+ Total Signals          : 15
  Total Nets             : 14
- Total Signal Drivers   : 9
- Total Blocks           : 2
+ Total Signal Drivers   : 11
+ Total Blocks           : 3
  Total Primitive Blocks : 2
- Total Processes        : 9
- Total Traceable Variables  : 17
- Total Scalar Nets and Variables : 93
-ntrace select -o on -n /nand_sl/va 
-ntrace select -o on -n /nand_sl/vb 
-ntrace select -o on -n /nand_sl/vout 
-ntrace select -o on -n /nand_sl/w 
+ Total Processes        : 12
+ Total Traceable Variables  : 19
+ Total Scalar Nets and Variables : 95
+ntrace select -o on -n /nand_wf/vout 
+ntrace select -o on -n /nand_wf/va 
+ntrace select -o on -n /nand_wf/vb 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 
- Simulation time 0.015625 sec.
+ Simulation time 0 sec.
 
- Estimate current memory usage : 163.164 Meg. 
+ Estimate current memory usage : 163.508 Meg. 
 
-Sun May 21 21:46:06 2023
+Sun Jun 04 23:30:37 2023
 

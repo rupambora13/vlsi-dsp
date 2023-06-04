@@ -1,0 +1,3 @@
+verilog work "nand_sl.v"
+verilog work "nand_wf.tfw"
+verilog work "C:/Xilinx92i/verilog/src/glbl.v"

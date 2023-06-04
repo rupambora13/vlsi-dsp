@@ -1,0 +1,3 @@
+MO decoder3x8_sl NULL "D:/git repositories/vlsi-dsp/lab/lab 10 - 3x8 decoder using switching logic/decoder_3x8_switching_logic_ise/decoder_3x8.v" vlg63/decoder3x8__sl.bin 1685905515
+MO decoder3x8_wf NULL "D:/git repositories/vlsi-dsp/lab/lab 10 - 3x8 decoder using switching logic/decoder_3x8_switching_logic_ise/decoder3x8_wf.tfw" vlg71/decoder3x8__wf.bin 1685905520
+MO glbl NULL C:/Xilinx92i/verilog/src/glbl.v vlg2D/glbl.bin 1685905520

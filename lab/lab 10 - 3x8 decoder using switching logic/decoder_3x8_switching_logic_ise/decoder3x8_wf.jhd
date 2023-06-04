@@ -1,0 +1,3 @@
+MODULE decoder3x8_wf
+SUBMODULE decoder3x8_sl
+INSTANCE UUT

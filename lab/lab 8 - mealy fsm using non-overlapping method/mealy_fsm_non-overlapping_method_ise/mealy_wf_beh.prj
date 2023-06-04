@@ -1,0 +1,3 @@
+verilog work "mealy_fsm.v"
+verilog work "mealy_wf.tfw"
+verilog work "C:/Xilinx92i/verilog/src/glbl.v"

@@ -2,15 +2,15 @@
    ./convolution_wf_isim_beh.exe
      -intstyle  ise
      -ipchost  localhost
-     -ipcport  50744
+     -ipcport  49819
 
-Sun May 21 19:27:56 2023
+Sun May 28 20:06:24 2023
 
 Total Line Count : 84
 
  Elaboration time : 0 sec.
 
- Estimate current memory usage : 158.659 Meg. 
+ Estimate current memory usage : 157.729 Meg. 
 
  Total Signals          : 14
  Total Nets             : 37
@@ -20,15 +20,17 @@ Total Line Count : 84
  Total Processes        : 13
  Total Traceable Variables  : 21
  Total Scalar Nets and Variables : 188
-ntrace select -o on -m / -l this 
+ntrace select -o on -n /convolution_wf/C 
+ntrace select -o on -n /convolution_wf/x 
+ntrace select -o on -n /convolution_wf/y 
 ntrace start 
 isimrun 1000 ns 
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 
- Simulation time 0.015625 sec.
+ Simulation time 0 sec.
 
- Estimate current memory usage : 164.131 Meg. 
+ Estimate current memory usage : 163.369 Meg. 
 
-Sun May 21 19:31:01 2023
+Sun May 28 20:29:58 2023
 

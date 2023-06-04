@@ -1,0 +1,2 @@
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux_8x1_switching_logic.ise" -intstyle ise -ifn mux8x1_sl.xst -ofn mux8x1_sl.syr
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux_8x1_switching_logic.ise" -intstyle ise -ifn mux8x1_sl.xst -ofn mux8x1_sl.syr

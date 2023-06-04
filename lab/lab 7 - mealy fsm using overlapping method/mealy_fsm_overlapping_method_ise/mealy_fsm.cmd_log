@@ -1,0 +1,1 @@
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 7 - mealy fsm using overlapping method/mealy_fsm_overlapping_method_ise/mealy_fsm_overlapping_method_ise.ise" -intstyle ise -ifn mealy_fsm.xst -ofn mealy_fsm.syr

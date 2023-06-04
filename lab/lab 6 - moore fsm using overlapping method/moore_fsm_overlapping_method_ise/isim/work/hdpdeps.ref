@@ -1,0 +1,10 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v
+FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_overlap.v" 2023/06/05.00:11:45 J.36
+MO work/moore_fsm \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_overlap.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_wf.tfw" 2023/06/05.00:13:07 J.36
+MO work/moore_wf \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_wf.tfw" \
+      MI moore_fsm

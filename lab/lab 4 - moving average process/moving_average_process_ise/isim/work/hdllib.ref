@@ -1,0 +1,4 @@
+MO moving_average_filter NULL "D:/git repositories/vlsi-dsp/lab/lab 4 - moving average process/moving_average_process_ise/ma_process.v" vlg77/moving__average__filter.bin 1685903733
+MO ma_process NULL "D:/git repositories/vlsi-dsp/lab/lab 4 - moving average process/moving_average_process_ise/ma_process.v" vlg64/ma__process.bin 1685292217
+MO ma_wf NULL "D:/git repositories/vlsi-dsp/lab/lab 4 - moving average process/moving_average_process_ise/ma_wf.tfw" vlg7A/ma__wf.bin 1685903733
+MO glbl NULL C:/Xilinx92i/verilog/src/glbl.v vlg2D/glbl.bin 1685291942

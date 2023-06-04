@@ -1,0 +1,99 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2007 Xilinx, Inc.
+// All Right Reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 9.2i
+//  \   \         Application : ISE
+//  /   /         Filename : mealy_wf.ant
+// /___/   /\     Timestamp : Mon Jun 05 00:17:19 2023
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: 
+//Design Name: mealy_wf
+//Device: Xilinx
+//
+`timescale 1ns/1ps
+
+module mealy_wf;
+    reg clk = 1'b0;
+    reg reset = 1'b0;
+    reg start = 1'b0;
+    wire out;
+
+    parameter PERIOD = 200;
+    parameter real DUTY_CYCLE = 0.5;
+    parameter OFFSET = 100;
+
+    initial    // Clock process for clk
+    begin
+        #OFFSET;
+        forever
+        begin
+            clk = 1'b0;
+            #(PERIOD-(PERIOD*DUTY_CYCLE)) clk = 1'b1;
+            #(PERIOD*DUTY_CYCLE);
+        end
+    end
+
+    mealy_fsm UUT (
+        .clk(clk),
+        .reset(reset),
+        .start(start),
+        .out(out));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock clk
+        #0;
+        ANNOTATE_out;
+        #OFFSET;
+        forever begin
+            #115;
+            ANNOTATE_out;
+            #85;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("D:\\git repositories\\vlsi-dsp\\lab\\lab 7 - mealy fsm using overlapping method\\mealy_fsm_overlapping_method_ise\\mealy_wf.ano");
+        #1200 // Final time:  1200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
+
+    initial begin
+        // -------------  Current Time:  185ns
+        #185;
+        start = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  385ns
+        #200;
+        reset = 1'b1;
+        start = 1'b0;
+        // -------------------------------------
+        // -------------  Current Time:  785ns
+        #400;
+        start = 1'b1;
+        // -------------------------------------
+        // -------------  Current Time:  985ns
+        #200;
+        start = 1'b0;
+    end
+
+    task ANNOTATE_out;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,out,%b]", $time, out);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
+
+endmodule
+

@@ -1,0 +1,3 @@
+MO glbl NULL C:/Xilinx92i/verilog/src/glbl.v vlg2D/glbl.bin 1685904706
+MO mealy_wf NULL "D:/git repositories/vlsi-dsp/lab/lab 8 - mealy fsm using non-overlapping method/mealy_fsm_non-overlapping_method_ise/mealy_wf.tfw" vlg0C/mealy__wf.bin 1685904705
+MO mealy_fsm NULL "D:/git repositories/vlsi-dsp/lab/lab 8 - mealy fsm using non-overlapping method/mealy_fsm_non-overlapping_method_ise/mealy_fsm.v" vlg41/mealy__fsm.bin 1685904705

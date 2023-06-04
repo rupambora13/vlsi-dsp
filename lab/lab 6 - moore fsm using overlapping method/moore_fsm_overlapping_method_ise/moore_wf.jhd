@@ -1,0 +1,3 @@
+MODULE moore_wf
+SUBMODULE moore_fsm
+INSTANCE UUT

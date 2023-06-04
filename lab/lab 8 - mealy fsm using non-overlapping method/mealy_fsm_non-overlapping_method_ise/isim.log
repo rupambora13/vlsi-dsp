@@ -1,0 +1,34 @@
+ command line:
+   ./mealy_wf_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  59629
+
+Mon Jun 05 00:21:47 2023
+
+Total Line Count : 80
+
+ Elaboration time : 0 sec.
+
+ Estimate current memory usage : 158.495 Meg. 
+
+ Total Signals          : 13
+ Total Nets             : 12
+ Total Signal Drivers   : 7
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 13
+ Total Traceable Variables  : 30
+ Total Scalar Nets and Variables : 172
+ntrace select -o on -m / -l this 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Simulation time 0 sec.
+
+ Estimate current memory usage : 171.045 Meg. 
+
+Mon Jun 05 00:22:05 2023
+

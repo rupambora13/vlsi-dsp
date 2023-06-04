@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module ma_process(x, y, b, clk);
-  parameter WIDTH = 8; // Input and output width
+  parameter WIDTH = 4; // Input and output width
   
   input signed [WIDTH-1:0] x; // Input data
   output reg signed [WIDTH-1:0] y; // Output data

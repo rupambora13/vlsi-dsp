@@ -1,0 +1,3 @@
+verilog work "ma_process.v"
+verilog work "ma_wf.tfw"
+verilog work "C:/Xilinx92i/verilog/src/glbl.v"

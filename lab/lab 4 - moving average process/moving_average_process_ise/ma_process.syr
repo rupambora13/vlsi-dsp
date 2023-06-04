@@ -1,0 +1,210 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.04 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.04 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: ma_process.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ma_process.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ma_process"
+Output Format                      : NGC
+Target Device                      : Automotive 9500XL
+
+---- Source Options
+Top Module Name                    : ma_process
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+
+---- Target Options
+Add IO Buffers                     : YES
+MACRO Preserve                     : YES
+XOR Preserve                       : YES
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : ma_process.lso
+Keep Hierarchy                     : YES
+RTL Output                         : Yes
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Verilog 2001                       : YES
+
+---- Other Options
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "ma_process.v" in library work
+Module <ma_process> compiled
+No errors in compilation
+Analysis of file <"ma_process.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <ma_process> in library <work> with parameters.
+	WIDTH = "00000000000000000000000000000100"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <ma_process>.
+	WIDTH = 32'sb00000000000000000000000000000100
+Module <ma_process> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ma_process>.
+    Related source file is "ma_process.v".
+WARNING:Xst:643 - "ma_process.v" line 18: The result of a 4x2-bit multiplication is partially used. Only the 4 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "ma_process.v" line 18: The result of a 4x2-bit multiplication is partially used. Only the 4 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:643 - "ma_process.v" line 18: The result of a 4x2-bit multiplication is partially used. Only the 4 least significant bits are used. If you are doing this on purpose, you may safely ignore this warning. Otherwise, make sure you are not losing information, leading to unexpected circuit behavior.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 4-bit register for signal <y>.
+    Found 12-bit register for signal <delay_line>.
+    Found 4-bit register for signal <sum>.
+    Found 4-bit adder for signal <sum$add0000> created at line 18.
+    Found 4-bit adder for signal <sum$addsub0000> created at line 18.
+    Found 4x2-bit multiplier for signal <sum$mult0006> created at line 18.
+    Found 4x2-bit multiplier for signal <sum$mult0007> created at line 18.
+    Found 4x2-bit multiplier for signal <sum$mult0008> created at line 18.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred   3 Multiplier(s).
+Unit <ma_process> synthesized.
+
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 4x2-bit multiplier                                    : 3
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 2
+# Registers                                            : 5
+ 4-bit register                                        : 5
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 3
+ 4x2-bit multiplier                                    : 3
+# Adders/Subtractors                                   : 2
+ 4-bit adder                                           : 2
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ma_process> ...
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ma_process.ngr
+Top Level Output File Name         : ma_process
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : YES
+Target Technology                  : Automotive 9500XL
+Macro Preserve                     : YES
+XOR Preserve                       : YES
+Clock Enable                       : YES
+wysiwyg                            : NO
+
+Design Statistics
+# IOs                              : 12
+
+Cell Usage :
+# BELS                             : 144
+#      AND2                        : 59
+#      AND3                        : 9
+#      INV                         : 57
+#      OR2                         : 15
+#      OR3                         : 4
+# FlipFlops/Latches                : 20
+#      FD                          : 20
+# IO Buffers                       : 12
+#      IBUF                        : 8
+#      OBUF                        : 4
+=========================================================================
+CPU : 0.65 / 0.69 s | Elapsed : 1.00 / 1.00 s
+ 
+--> 
+
+Total memory usage is 182440 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    7 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

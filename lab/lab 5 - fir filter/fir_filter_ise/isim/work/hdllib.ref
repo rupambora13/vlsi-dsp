@@ -1,0 +1,3 @@
+MO fir_wf NULL "D:/git repositories/vlsi-dsp/lab/lab 5 - fir filter/fir_filter_ise/fir_wf.tfw" vlg21/fir__wf.bin 1685292364
+MO glbl NULL C:/Xilinx92i/verilog/src/glbl.v vlg2D/glbl.bin 1685292364
+MO fir_filter NULL "D:/git repositories/vlsi-dsp/lab/lab 5 - fir filter/fir_filter_ise/fir_filter.v" vlg5A/fir__filter.bin 1685292364

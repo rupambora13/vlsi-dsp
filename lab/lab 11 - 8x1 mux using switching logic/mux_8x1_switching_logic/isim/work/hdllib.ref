@@ -1,0 +1,4 @@
+EN mux_wf NULL "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux_wf.vhw" sub00/vhpl00 1685901721
+MO mux8x1_sl NULL "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux8x1_sl.v" vlg05/mux8x1__sl.bin 1685292730
+MO glbl NULL C:/Xilinx92i/verilog/src/glbl.v vlg2D/glbl.bin 1685292734
+AR mux_wf testbench_arch "D:/git repositories/vlsi-dsp/lab/lab 11 - 8x1 mux using switching logic/mux_8x1_switching_logic/mux_wf.vhw" sub00/vhpl01 1685901722

@@ -1,0 +1,3 @@
+MODULE ma_wf
+SUBMODULE moving_average_filter
+INSTANCE UUT

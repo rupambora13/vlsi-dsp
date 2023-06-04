@@ -1,0 +1,34 @@
+ command line:
+   ./moore_wf_isim_beh.exe
+     -intstyle  ise
+     -ipchost  localhost
+     -ipcport  59605
+
+Mon Jun 05 00:13:17 2023
+
+Total Line Count : 75
+
+ Elaboration time : 0 sec.
+
+ Estimate current memory usage : 157.991 Meg. 
+
+ Total Signals          : 13
+ Total Nets             : 12
+ Total Signal Drivers   : 7
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 12
+ Total Traceable Variables  : 28
+ Total Scalar Nets and Variables : 169
+ntrace select -o on -m / -l this 
+ntrace start 
+isimrun 1000 ns 
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+
+ Simulation time 0.078125 sec.
+
+ Estimate current memory usage : 163.463 Meg. 
+
+Mon Jun 05 00:15:05 2023
+

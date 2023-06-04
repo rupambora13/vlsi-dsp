@@ -1,0 +1,10 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO work/glbl FL $XILINX/verilog/src/glbl.v
+FL "D:/git repositories/vlsi-dsp/lab/lab 5 - fir filter/fir_filter_ise/fir_filter.v" 2023/05/21.20:03:58 J.36
+MO work/fir_filter \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 5 - fir filter/fir_filter_ise/fir_filter.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 5 - fir filter/fir_filter_ise/fir_wf.tfw" 2023/05/28.22:15:53 J.36
+MO work/fir_wf \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 5 - fir filter/fir_filter_ise/fir_wf.tfw" \
+      MI fir_filter

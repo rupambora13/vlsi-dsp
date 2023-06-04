@@ -1,3 +1,6 @@
 xst -ise "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation_ise.ise" -intstyle ise -ifn correlation.xst -ofn correlation.syr
 xst -ise "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation_ise.ise" -intstyle ise -ifn correlation.xst -ofn correlation.syr
 xst -ise "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation_ise.ise" -intstyle ise -ifn correlation.xst -ofn correlation.syr
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation_ise.ise" -intstyle ise -ifn correlation.xst -ofn correlation.syr
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation_ise.ise" -intstyle ise -ifn correlation.xst -ofn correlation.syr
+xst -ise "D:/git repositories/vlsi-dsp/lab/lab 2 - correlation/correlation_ise/correlation_ise.ise" -intstyle ise -ifn correlation.xst -ofn correlation.syr
