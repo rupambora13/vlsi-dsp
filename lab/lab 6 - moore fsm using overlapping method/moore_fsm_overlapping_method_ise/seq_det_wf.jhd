@@ -1,0 +1,3 @@
+MODULE seq_det_wf
+SUBMODULE seq_detector
+INSTANCE UUT

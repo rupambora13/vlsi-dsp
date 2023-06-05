@@ -1,2 +1,0 @@
-xst -ise "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_fsm_overlapping_method_ise.ise" -intstyle ise -ifn moore_fsm.xst -ofn moore_fsm.syr
-xst -ise "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_fsm_overlapping_method_ise.ise" -intstyle ise -ifn moore_fsm.xst -ofn moore_fsm.syr

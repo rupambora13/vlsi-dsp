@@ -1,4 +1,4 @@
-V3 7
+V3 14
 FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
 MO work/glbl FL $XILINX/verilog/src/glbl.v
 FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_overlap.v" 2023/06/05.00:11:45 J.36
@@ -8,3 +8,14 @@ FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/
 MO work/moore_wf \
       FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_wf.tfw" \
       MI moore_fsm
+FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_detector.v" 2023/06/05.09:01:48 J.36
+MO work/seq_detector \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_detector.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_det_wf.tfw" 2023/06/05.09:03:59 J.36
+MO work/seq_det_wf \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_det_wf.tfw" \
+      MI seq_detector
+FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_tb.v" 2023/06/05.09:06:03 J.36
+MO work/testbench \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_tb.v" \
+      MI seq_detector

@@ -1,0 +1,3 @@
+verilog work "seq_detector.v"
+verilog work "seq_det_wf.tfw"
+verilog work "C:/Xilinx92i/verilog/src/glbl.v"

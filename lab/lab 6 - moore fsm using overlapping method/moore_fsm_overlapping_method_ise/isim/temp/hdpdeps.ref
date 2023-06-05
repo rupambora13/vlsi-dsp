@@ -1,0 +1,10 @@
+V3 7
+FL $XILINX/verilog/src/glbl.v 2007/05/19.02:52:56 J.36
+MO isim_temp/glbl FL $XILINX/verilog/src/glbl.v
+FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_detector.v" 2023/06/05.09:01:48 J.36
+MO isim_temp/seq_detector \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_detector.v"
+FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_tb.v" 2023/06/05.09:06:03 J.36
+MO isim_temp/testbench \
+      FL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_tb.v" \
+      MI seq_detector

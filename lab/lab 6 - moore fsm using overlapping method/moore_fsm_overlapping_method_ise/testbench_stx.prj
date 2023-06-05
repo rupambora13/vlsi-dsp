@@ -1,0 +1,3 @@
+verilog isim_temp "seq_detector.v"
+verilog isim_temp "seq_tb.v"
+verilog isim_temp "C:/Xilinx92i/verilog/src/glbl.v"

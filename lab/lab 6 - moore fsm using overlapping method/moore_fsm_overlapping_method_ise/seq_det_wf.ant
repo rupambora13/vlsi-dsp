@@ -7,22 +7,22 @@
 // /___/  \  /    Vendor: Xilinx 
 // \   \   \/     Version : 9.2i
 //  \   \         Application : ISE
-//  /   /         Filename : moore_wf.tfw
-// /___/   /\     Timestamp : Mon Jun 05 00:13:07 2023
+//  /   /         Filename : seq_det_wf.ant
+// /___/   /\     Timestamp : Mon Jun 05 09:03:59 2023
 // \   \  /  \ 
 //  \___\/\___\ 
 //
 //Command: 
-//Design Name: moore_wf
+//Design Name: seq_det_wf
 //Device: Xilinx
 //
 `timescale 1ns/1ps
 
-module moore_wf;
+module seq_det_wf;
+    reg x = 1'b0;
     reg clk = 1'b0;
     reg reset = 1'b0;
-    reg start = 1'b0;
-    wire out;
+    wire z;
 
     parameter PERIOD = 200;
     parameter real DUTY_CYCLE = 0.5;
@@ -39,30 +39,58 @@ module moore_wf;
         end
     end
 
-    moore_fsm UUT (
+    seq_detector UUT (
+        .x(x),
         .clk(clk),
         .reset(reset),
-        .start(start),
-        .out(out));
+        .z(z));
+
+    integer TX_FILE = 0;
+    integer TX_ERROR = 0;
+    
+    initial begin    // Annotation process for clock clk
+        #0;
+        ANNOTATE_z;
+        #OFFSET;
+        forever begin
+            #115;
+            ANNOTATE_z;
+            #85;
+        end
+    end
+
+    initial begin  // Open the annotations file...
+        TX_FILE = $fopen("D:\\git repositories\\vlsi-dsp\\lab\\lab 6 - moore fsm using overlapping method\\moore_fsm_overlapping_method_ise\\seq_det_wf.ano");
+        #1200 // Final time:  1200 ns
+        $display("Success! Annotation Simulation Complete.");
+        $fdisplay(TX_FILE, "Total[%d]", TX_ERROR);
+        $fclose(TX_FILE);
+        $finish;
+    end
 
     initial begin
         // -------------  Current Time:  185ns
         #185;
+        x = 1'b1;
         reset = 1'b1;
-        start = 1'b1;
         // -------------------------------------
         // -------------  Current Time:  585ns
         #400;
-        start = 1'b0;
+        x = 1'b0;
         // -------------------------------------
         // -------------  Current Time:  785ns
         #200;
-        start = 1'b1;
+        x = 1'b1;
         // -------------------------------------
-        // -------------  Current Time:  985ns
-        #200;
-        start = 1'b0;
     end
+
+    task ANNOTATE_z;
+        #0 begin
+            $fdisplay(TX_FILE, "Annotate[%d,z,%b]", $time, z);
+            $fflush(TX_FILE);
+            TX_ERROR = TX_ERROR + 1;
+        end
+    endtask
 
 endmodule
 

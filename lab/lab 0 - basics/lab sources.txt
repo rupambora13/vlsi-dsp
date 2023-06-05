@@ -1,0 +1,1 @@
+lab6 - https://electronics.stackexchange.com/questions/505806/1011-overlapping-moore-sequence-detector-in-verilog

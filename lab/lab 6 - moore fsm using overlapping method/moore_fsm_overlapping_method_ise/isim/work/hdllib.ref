@@ -1,3 +1,6 @@
+MO seq_det_wf NULL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_det_wf.tfw" vlg45/seq__det__wf.bin 1685936051
+MO testbench NULL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_tb.v" vlg6C/testbench.bin 1685936195
+MO seq_detector NULL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/seq_detector.v" vlg1A/seq__detector.bin 1685936050
 MO moore_wf NULL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_wf.tfw" vlg2E/moore__wf.bin 1685904196
 MO moore_fsm NULL "D:/git repositories/vlsi-dsp/lab/lab 6 - moore fsm using overlapping method/moore_fsm_overlapping_method_ise/moore_overlap.v" vlg6B/moore__fsm.bin 1685904196
 MO glbl NULL C:/Xilinx92i/verilog/src/glbl.v vlg2D/glbl.bin 1685904196
